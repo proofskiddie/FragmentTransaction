@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/activity_default_margin"
+    android:layout_marginLeft="@dimen/activity_default_margin"
+    android:layout_marginRight="@dimen/activity_default_margin"
+    android:layout_marginTop="@dimen/activity_default_margin"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:name="android.example.com.fragmentexample1.SimpleFragment"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_simple" />
+
+    <ImageView
+        android:id="@+id/article_image"
+        android:layout_width="@dimen/default_image"
+        android:layout_height="@dimen/default_image"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/hamburger"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/article_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/article_image">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/article_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_margin"
+                android:text="@string/article_heading"
+                android:textSize="@dimen/heading"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/article_text" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button_show_fragment"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:background="@color/my_fragment_color"
+        android:padding="@dimen/default_margin"
+        android:text="@string/button_show_fragment"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/scroll_view"
+        app:layout_constraintTop_toBottomOf="@id/article_image" />
+
+</android.support.constraint.ConstraintLayout>

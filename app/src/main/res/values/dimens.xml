@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_default_margin">16dp</dimen>
+    <dimen name="guide_center_left">88dp</dimen>
+    <dimen name="default_image">100dp</dimen>
+    <dimen name="default_margin_top">96dp</dimen>
+    <dimen name="default_margin_left">32dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="heading">24sp</dimen>
+    <dimen name="radio_margin">8dp</dimen>
+</resources>
